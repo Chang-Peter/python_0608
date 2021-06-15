@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}消息{% endblock %}
+{% block headmessage %} <h1>消息內容</h1> {% endblock %}
+{% block content %}
+<input type ="button" onclick="history.back()" value="上一頁"></input>
+<table width=800 border=1>
+    <tr>
+        <td>標題</td>
+        <td>{{target.title}}</td>
+    </tr>
+    <tr>
+        <td>張貼日期</td>
+        <td>{{target.pub_date}}</td>
+    </tr>
+    <tr>
+        <td>內容</td>
+        <td>{{target.body}}</td>
+    </tr>
+</table>
+{% endblock %}

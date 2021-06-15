@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}國際城市人口排行前五名{% endblock %}
+{% block headmessage %} <h1>國際城市人口排行前五名</h1> {% endblock %}
+{% block content %}
+
+<input type ="button" onclick="history.back()" value="上一頁"></input>
+<table width=800 border=1>
+ <tr><td>城市</td><td>人口</td><td>國家</td>
+{% for city in cities %}
+    <tr>   
+        <td>{{ city.name }}</td>
+        <td>{{ city.population }}</td>
+        <td>{{ city.country }}</td>
+    </tr>
+{% endfor %}
+</table>
+{% endblock %}
